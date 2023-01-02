@@ -22,7 +22,7 @@
              return [
                 "view" => VIEW_DIR."forum/listTopics.php",
                 "data" => [
-                "topics" => $topicManager->findAllTopics(['creationDateTopic', 'DESC']),         
+                    "topics" => $topicManager->findAllTopics(['creationDateTopic', 'DESC']),         
                       
                 ]
             ];
@@ -203,10 +203,6 @@
                         "user_id" => $_SESSION['user']->getId()
                     ]);
                 }
-
-
-              $this->redirectTo("forum", "detailCategorie", $id);
-             
             }
 
             return [
