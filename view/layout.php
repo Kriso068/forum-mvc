@@ -73,55 +73,6 @@
             </nav>
 
 
-
-
-
-
-
-
-<!--
-
-            <nav class="navbar navbar-expand-lg bg-dark bg-opacity-75 mb-5">
-                <div class="container-fluid ">
-                    <a class="navbar-brand text-light" href="<?= "index.php?ctrl=home" ?> ">Home</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <?php
-                    if(App\Session::getUser()){
-                        ?>
-                        
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link text-light" aria-current="page" href="index.php?ctrl=home&action=users">Voir la liste des gens</a>
-                            </li>
-                            <li>
-                                <a class="nav-link text-light" aria-current="page" href="index.php?ctrl=forum&action=listCategories">List of Categories</a>
-                            </li>
-                            <li>
-                                <a class="nav-link text-light" aria-current="page" href="index.php?ctrl=forum&action=listTopics">List of Topics</a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav ml-auto mb-2 mb-lg-0 ">
-                                    <a href="index.php?ctrl=home&action=detailUser&id=<?php echo App\Session::getUser()->getId()?>" class='me-2 nav-link text-light'><span class="fas fa-user me-2"></span>&nbsp;<?= App\Session::getUser()->getPseudo()?></a>
-                                    <a href="index.php?ctrl=security&action=logout" class="nav-link text-light">Logout</a>
-                                    <?php
-                                }
-                                else{
-                                    ?>
-                                    <a class="nav-link text-light" aria-current="page" href="index.php?ctrl=forum&action=listCategories">List of Categories</a>
-                                    <a class="nav-link text-light" aria-current="page" href="index.php?ctrl=security&action=login">Login</a>
-                                    <a class="nav-link text-light" aria-current="page" href="index.php?ctrl=security&action=register">Register</a>   
-                                <?php
-                                }
-                            ?>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-
--->
             </header>
     <div class="container">        
             <main id="forum">
@@ -168,20 +119,6 @@
         })
 
         
-
-        /*
-        $("#ajaxbtn").on("click", function(){
-            $.get(
-                "index.php?action=ajax",
-                {
-                    nb : $("#nbajax").text()
-                },
-                function(result){
-                    $("#nbajax").html(result)
-                }
-            )
-        })*/
-
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>

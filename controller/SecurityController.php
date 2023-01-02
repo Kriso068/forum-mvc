@@ -46,31 +46,7 @@
                     ]
                 ]);
                 $confirmPass = filter_input(INPUT_POST, 'confirmPass', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-           /*
-                if(isset($_FILES['file'])){
-
-                    $tempName = $_FILES['file']['tmp_name'];
-                    $name = $_FILES['file']['name'];
-                    $size = $_FILES['file']['size'];
-                    $error = $_FILES['file']['error'];
-                    $type = $_FILES['file']['type'];
-                
-                
-                    $tabExtension = explode('.', $name);
-                    $extension = strtolower(end($tabExtension));
-                
-                    $extensionAutorisees = ['jpg', 'jpeg', 'gif', 'png'];
-                    $taileMax = 4000000;
-                
-                    if(in_array($extension, $extensionAutorisees) && $size <= $taileMax && $error == 0){
-                
-                        $uniqueName = uniqid('', true);
-                        $fileName = $uniqueName.'.'.$extension;
-                        move_uploaded_file($tempName, './upload/' .$fileName); 
-                
-                    }
-                }
-            */
+     
 
                 if ($nickname && $email && $password) {
 
