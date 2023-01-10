@@ -1,4 +1,4 @@
-# blog
+# Forum
 
 Creation of a simple forum with hybrid MVC technique
 
