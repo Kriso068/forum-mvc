@@ -13,7 +13,7 @@ $categories = $result["data"]['categories'];
 <?php if ($categories) : ?>
 <?php foreach($categories as $categorie ) :?>
     
-    <div class="card card-body my-5">
+    <div class="card card-body ">
         <h4 class="card-title">Category name : <?=$categorie->getCategoryName() ;?></h4>
         <h4 class="card-title">Number of topics : <?=$categorie->getNbTopics() ;?></h4>
         <div class="row d-flex justify-content-between">

@@ -3,11 +3,17 @@
   position: relative;
   padding-bottom: 50px;
   min-height: 100vh;
+  background-color: rgb(216, 189, 148);
 }
 
-.orange{
-  background-color:   #c57737;
+.green{
+  background-color:rgb(21, 54, 21) !important;
 }
+
+.beige{
+  color: rgb(114, 7, 7);
+}
+
 
   footer{
     position: absolute !important;

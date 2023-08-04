@@ -8,7 +8,7 @@ $posts = $result["data"]['posts'];
 
 <h1>Detail of a Topic</h1>
 <div>
-    <?php if ($topic->getUser()->getPseudo() == (app\Session::getUser()->getPseudo()) && $topic -> getClosed() == 1) :?>
+    <?php if ($topic->getUser()->getPseudo() == (app\Session::getUser()->getPseudo()) && $topic -> getClosed() == 0) :?>
         <a href="index.php?ctrl=forum&action=editTopic&id=<?=$id?>" class="btn btn-primary my-2 col-2">Edit</a>
     <?php endif; ?>
 </div>
@@ -23,7 +23,7 @@ $posts = $result["data"]['posts'];
     <div class="bg-dark bg-opacity-25 p-2 mb-3">
         Written by <?=$topic->getUser()->getPseudo() ;?> on <?=$topic->getCreationdate();?>
     </div>
-    <?php if ($topic -> getClosed() == 1) :?>
+    <?php if ($topic -> getClosed() == 0) :?>
         <a href="index.php?ctrl=forum&action=addPost&id=<?=$id?>" class="btn btn-primary my-2 col-2">Add a new Post</a>
     <?php endif; ?> 
     <?php if ($posts) :?>
@@ -34,7 +34,7 @@ $posts = $result["data"]['posts'];
         <?php $idpost = $post->getId();?>
         <div class="bg-success bg-opacity-50 p-2 mb-3 d-flex ">
             <div class="me-auto p-2"><?=$post->getMessage();?></div>
-            <?php if ($post->getUser()->getPseudo() == (app\Session::getUser()->getPseudo()) && $topic -> getClosed() == 1) :?>
+            <?php if ($post->getUser()->getPseudo() == (app\Session::getUser()->getPseudo()) && $topic -> getClosed() == 0) :?>
                 <a href="index.php?ctrl=forum&action=editPost&id=<?=$idpost?>" class="btn btn-dark">Edit</a>
             <?php endif; ?> 
             <?php if ($post->getUser()->getPseudo() == (app\Session::getUser()->getPseudo())) :?>

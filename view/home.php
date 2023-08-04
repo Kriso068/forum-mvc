@@ -3,9 +3,9 @@
 $categories = $result["data"]['categories'];
 
 ?>
-<h1>Welcome of my forum</h1>
+<h1 class="beige text-center">Welcome of my forum</h1>
 
-<h1>list of Categories</h1>  
+<h3>list of Categories :</h3>  
 <?php if ($categories) : ?>
 <?php foreach($categories as $categorie ) :?>
     

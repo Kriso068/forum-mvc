@@ -63,6 +63,7 @@
                                 'pseudo' => $nickname,
                                 'email' => $email,
                                 'password' => $hash,
+                                'registerDate' => (new \DateTime('now'))->format('Y-m-d H:i:s'), 
                                 'roles' => json_encode(['ROLE_USER'])
                             ])){
 
