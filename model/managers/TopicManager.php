@@ -25,7 +25,7 @@
             "ORDER BY ".$order[0]. " ".$order[1] :
             "";
 
-            $sql = "SELECT a.title , a.creationDate
+            $sql = "SELECT a.title , a.creationDate, a.id_topic
                     FROM ".$this->tableName." a
                     WHERE category_id = :id
                     ".$orderQuery;
@@ -75,7 +75,7 @@
                 "ORDER BY ".$order[0]. " ".$order[1] :
                 "";
 
-            $sql = "SELECT t.id_topic, t.title, COUNT(t.id_topic) AS nbmessages, t.creationdate AS creationDateTopic
+            $sql = "SELECT t.user_id , t.closed, t.id_topic, t.title, COUNT(t.id_topic) AS nbmessages, t.creationdate AS creationDateTopic
                 FROM ".$this->tableName." t
                 LEFT JOIN message m ON t.id_topic = m.topic_id
                 GROUP BY t.id_topic
@@ -90,6 +90,29 @@
     
         }
         
-    
+        public function closeTopic($id)
+        {
+            $sql = "UPDATE ".$this->tableName." t
+            SET t.closed = 1
+            WHERE t.id_".$this->tableName." = :id
+            ";
+
+            return DAO::update($sql,[
+                    ":id" => $id,
+                    
+            ]);
+        }
+
+        public function openTopic($id)
+        {
+            $sql = "UPDATE ".$this->tableName." t
+            SET t.closed = 0
+            WHERE t.id_".$this->tableName." = :id
+            ";
+
+            return DAO::update($sql,[
+                    ":id" => $id,  
+            ]);
+        }
         
     }

@@ -11,7 +11,6 @@ $users = $result["data"]['users'];
         <h4 class="card-title">User pseudo : <?=$user->getPseudo() ;?></h4>
         <div class="bg-light p-2 mb-3">
             <p>User email : <?=$user->getEmail() ;?> </p>
-            <p>User password : <?=$user->getPassword() ;?> </p>
             <!-- <p>User role : <?=$user->getRoles(['']) ;?> </p> -->
             <p>User created at : <?=$user->getRegisterDate();?></p>
         </div>

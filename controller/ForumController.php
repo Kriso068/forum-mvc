@@ -26,12 +26,6 @@
                       
                 ]
             ];
-           /* return [
-                "VIEW" => VIEW_DIR."home.php",
-                "data" => [
-                    "topics" => $topicManager->findAll(["creationdate", "DESC"]),         
-                ]
-            ];*/
         }
 
 
@@ -40,9 +34,6 @@
         /********************************************************Categories****************************************************************************************/
 
 
-
-
-        /*********************************************************FONCTION EN COURS */
         public function searchBar()
         {
             $categoryManager = new CategoryManager();
@@ -82,6 +73,7 @@
 
             $categoryManager = new CategoryManager();
             $topicManager = new TopicManager();
+           
            
             return [
                 "view" => VIEW_DIR."forum/detailCategorie.php",
@@ -190,6 +182,7 @@
                $idTopic = $topicManager->add([
                         "title" => $title,
                         "category_id" => $id,
+                        'creationdate' => (new \DateTime('now'))->format('Y-m-d H:i:s'), 
                         "user_id" => $_SESSION['user']->getId()
                     ]);
                    
@@ -199,6 +192,7 @@
 
                     $postManager->add([
                         "message" => $post,
+                        'creationdate' => (new \DateTime('now'))->format('Y-m-d H:i:s'), 
                         "topic_id" => $idTopic,
                         "user_id" => $_SESSION['user']->getId()
                     ]);
@@ -245,6 +239,24 @@
                     "topic" => $updateTopic,
                 ]
             ];
+        }
+
+        public function closeTopic($id)
+        {
+
+            $topicManager = new TopicManager();
+           
+            $topicManager->closeTopic($id);
+            $this->redirectTo("forum", "listTopics");
+        }
+        
+        public function openTopic($id)
+        {
+
+            $topicManager = new TopicManager();
+           
+            $topicManager->openTopic($id);
+            $this->redirectTo("forum", "listTopics");
         }
 
         /********************************************************Posts***************************************************************************************/

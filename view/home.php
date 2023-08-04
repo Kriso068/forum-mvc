@@ -3,7 +3,7 @@
 $categories = $result["data"]['categories'];
 
 ?>
-<h1>BIENVENUE SUR MON BLOG</h1>
+<h1>Welcome of my forum</h1>
 
 <h1>list of Categories</h1>  
 <?php if ($categories) : ?>

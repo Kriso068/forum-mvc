@@ -8,19 +8,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     
     <script src="https://cdn.tiny.cloud/1/zg3mwraazn1b2ezih16je1tc6z7gwp5yd4pod06ae5uai8pa/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="./<?= PUBLIC_DIR ?>/css/style.css">
-    <title>BLOG</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link rel="stylesheet" href="./<?= PUBLIC_DIR ?>/css/style.css">
+    <title>FORUM</title>
 </head>
 <body>
-    
-        <div id="mainpage">
-            <!-- c'est ici que les messages (erreur ou succès) s'affichent-->
-            <h3 class="message" style="color: red"><?= App\Session::getFlash("error") ?></h3>
-            <h3 class="message" style="color: green"><?= App\Session::getFlash("success") ?></h3>
-            <header>
+    <div id="mainpage">
+        <!-- c'est ici que les messages (erreur ou succès) s'affichent-->
+        <h3 class="message" style="color: red"><?= App\Session::getFlash("error") ?></h3>
+        <h3 class="message" style="color: green"><?= App\Session::getFlash("success") ?></h3>
+        <header>
 
-            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <nav class="navbar navbar-expand-lg navbar-dark orange">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="<?= "index.php?ctrl=home" ?> ">Home</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,10 +70,9 @@
                 </div>
             </nav>
 
-
-            </header>
-    <div class="container">        
-            <main id="forum">
+        </header>
+        <div class="container">        
+            <main>
                 <?= $page ?>
             </main>
         </div>

@@ -1,7 +1,6 @@
 <?php 
 
 $user = $result['data']['user'];
-var_dump($user);
 ?>
 
   <div class="card card-body bg-light mt-5">

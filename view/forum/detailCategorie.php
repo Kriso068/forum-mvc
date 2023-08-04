@@ -20,7 +20,7 @@ $topics = $result["data"]['topics'];
             <h4>The list of topics in the current category :</h4>
             <?php foreach ($topics as $topic) : ?>
             <div class="bg-success bg-opacity-50 p-2 mb-3">
-                Titre du topic : <?=$topic->getTitle();?>
+                Titre du topic : <a href=" index.php?ctrl=forum&action=detailTopic&id=<?=$topic->getId();?>"><?=$topic->getTitle();?></a>
             </div>
             <div class="card-footer bg-dark bg-opacity-25 p-2 mb-3">
                 Created on <?=$topic->getCreationdate();?>

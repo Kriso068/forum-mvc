@@ -23,7 +23,7 @@
             "ORDER BY ".$order[0]. " ".$order[1] :
             "";
 
-            $sql = "SELECT a.message , a.creationDate, a.id_message
+            $sql = "SELECT a.message , a.creationDate, a.id_message, a.user_id
                     FROM ".$this->tableName." a
                     WHERE topic_id = :id
                     ".$orderQuery;
