@@ -6,17 +6,42 @@
   background-color: rgb(216, 189, 148);
 }
 
-.green{
+.bgGreen{
   background-color:rgb(21, 54, 21) !important;
+}
+
+.green{
+  color:rgb(21, 54, 21) !important;
+}
+
+
+.BgBeige{
+  background-color: rgb(216, 189, 148);
 }
 
 .beige{
   color: rgb(114, 7, 7);
 }
 
+.white{
+  color: rgb(236, 223, 204) !important;
+}
 
-  footer{
-    position: absolute !important;
-    bottom:0;
-    width: 100%;
-  }
+.bgWhite{
+  background-color: rgb(236, 223, 204) !important;
+}
+
+.red{
+  color: rgb(143, 30, 30) !important;
+}
+
+.bntGreenText {
+  color: rgb(66, 100, 66) !important;
+}
+
+
+footer{
+  position: absolute !important;
+  bottom:0;
+  width: 100%;
+}

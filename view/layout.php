@@ -18,7 +18,7 @@
         <h3 class="message" style="color: green"><?= App\Session::getFlash("success") ?></h3>
         <header>
 
-            <nav class="navbar navbar-expand-lg navbar-dark green">
+            <nav class="navbar navbar-expand-lg navbar-dark bgGreen">
                 <div class="container-fluid">
                     <a class="navbar-brand text-warning" href="<?= "index.php?ctrl=home" ?> ">Home</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,17 +40,15 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="index.php?ctrl=forum&action=listTopics">List of Topics</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">About</a>
-                                </li>
+                            
                         </ul>
                         <form class="d-flex" action="index.php?ctrl=forum&action=searchBar" method="post" enctype="#">
-                            <input class="form-control me-sm-2" type="text" name="categoryName" placeholder="Search Category">
+                            <input class="form-control me-sm-2 BgWhite" type="text" name="categoryName" placeholder="Search Category">
                             <button class="btn btn-warning my-2 my-sm-0" type="submit">Search </button>
                         </form>
                         <ul class="navbar-nav ml-auto mb-2 mb-lg-0 ">
                             <li>
-                                <a href="index.php?ctrl=home&action=detailUser&id=<?php echo App\Session::getUser()->getId()?>" class='me-2 nav-link text-light'><span class="fas fa-user me-2"></span>&nbsp;<?= App\Session::getUser()->getPseudo()?></a>
+                                <a href="index.php?ctrl=home&action=detailUser&id=<?php echo App\Session::getUser()->getId()?>" class='me-2 nav-link red'><span class="fas fa-user me-2"></span>&nbsp;<?= App\Session::getUser()->getPseudo()?></a>
                             </li>
                             <li>
                                 <a href="index.php?ctrl=security&action=logout" class="nav-link text-warning">Logout</a>
@@ -76,7 +74,7 @@
                 <?= $page ?>
             </main>
         </div>
-        <footer class="green text-center text-warning sticky-bottom">
+        <footer class="bgGreen text-center text-warning sticky-bottom">
             <small>&copy; 2020 - Forum CDA - <a class="" href="/home/forumRules.html">Règlement du forum</a> - <a href="">Mentions légales</a></small>
             <!--<button id="ajaxbtn">Surprise en Ajax !</button> -> cliqué <span id="nbajax">0</span> fois-->
         </footer>
