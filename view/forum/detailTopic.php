@@ -10,7 +10,7 @@ $posts = $result["data"]['posts'];
 <?php if (app\Session::getUser()): ?>
     <div>
         <?php if (($topic->getUser()->getPseudo() == (app\Session::getUser()->getPseudo())) && ($topic -> getClosed() == 0)) :?>
-            <a href="index.php?ctrl=forum&action=editTopic&id=<?=$id?>" class="btn bntGreenText my-2 col-2">Edit</a>
+            <a href="index.php?ctrl=forum&action=editTopic&id=<?=$id?>" class=" btn bntGreenText my-2 col-2">Edit</a>
         <?php endif; ?>
     </div>
     <div>
@@ -37,10 +37,10 @@ $posts = $result["data"]['posts'];
             <div class="me-auto p-2"><?=$post->getMessage();?></div>
             <?php if (app\Session::getUser()): ?>
                 <?php if ($post->getUser()->getPseudo() == (app\Session::getUser()->getPseudo()) && $topic -> getClosed() == 0) :?>
-                    <a href="index.php?ctrl=forum&action=editPost&id=<?=$idpost?>" class="btn btn-dark">Edit</a>
+                    <a href="index.php?ctrl=forum&action=editPost&id=<?=$idpost?>" class=" h-25 btn btn-dark">Edit</a>
                 <?php endif; ?> 
                 <?php if ($post->getUser()->getPseudo() == (app\Session::getUser()->getPseudo())) :?>
-                    <a href="index.php?ctrl=forum&action=deletePost&id=<?=$idpost?>" class="btn btn-danger">delete</a>
+                    <a href="index.php?ctrl=forum&action=deletePost&id=<?=$idpost?>" class=" h-25 btn btn-danger">delete</a>
                 <?php endif; ?> 
             <?php endif; ?> 
             

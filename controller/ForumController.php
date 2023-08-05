@@ -182,13 +182,14 @@
                $idTopic = $topicManager->add([
                         "title" => $title,
                         "category_id" => $id,
-                        'creationdate' => (new \DateTime('now'))->format('Y-m-d H:i:s'), 
+                        'creationdate' => (new \DateTime('now'))->format('Y-m-d H:i:s'),
+                        'closed' => 0, 
                         "user_id" => $_SESSION['user']->getId()
                     ]);
                    
 
                     $postManager = new PostManager();
-                    //$dao = new DAO();
+                  
 
                     $postManager->add([
                         "message" => $post,
@@ -275,6 +276,7 @@
                     $postManager->add([
                         "message" => $message,
                         "topic_id" => $id,
+                        'creationdate' => (new \DateTime('now'))->format('Y-m-d H:i:s'), 
                         "user_id" => $_SESSION['user']->getId()
                     ]);
                 }
