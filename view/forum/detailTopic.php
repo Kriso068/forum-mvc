@@ -34,7 +34,7 @@ $posts = $result["data"]['posts'];
             
         <?php $idpost = $post->getId();?>
         <div class="bg-success bg-opacity-50 p-2 mb-3 d-flex ">
-            <div class="me-auto p-2"><?=$post->getMessage();?></div>
+            <div class="me-auto p-2 text-justify"><?=$post->getMessage();?></div>
             <?php if (app\Session::getUser()): ?>
                 <?php if ($post->getUser()->getPseudo() == (app\Session::getUser()->getPseudo()) && $topic -> getClosed() == 0) :?>
                     <a href="index.php?ctrl=forum&action=editPost&id=<?=$idpost?>" class=" h-25 btn btn-dark">Edit</a>
