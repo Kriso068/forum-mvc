@@ -1,5 +1,5 @@
 
-<h1>form connexion</h1>
+<h1>Register</h1>
 
 <form action="index.php?ctrl=security&action=register" method="POST" enctype="multipart/form-data">
     <div class="form-group">

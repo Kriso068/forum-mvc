@@ -1,5 +1,5 @@
 
-<h1>form login</h1>
+<h1>Login</h1>
 
 <form action="index.php?ctrl=security&action=login" method="POST">
     <div class="form-group">

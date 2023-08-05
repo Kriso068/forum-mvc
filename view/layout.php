@@ -74,8 +74,8 @@
                 <?= $page ?>
             </main>
         </div>
-        <footer class="bgGreen text-center text-warning sticky-bottom">
-            <small>&copy; 2020 - Forum CDA - <a class="" href="/home/forumRules.html">Règlement du forum</a> - <a href="">Mentions légales</a></small>
+        <footer class="bgGreen text-warning sticky-bottom text-center ">
+            <small>&copy; 2020 - Forum CDA - <a class="white " href="/home/forumRules.html">Règlement du forum</a> - <a href="" class="text-warning">Mentions légales</a></small>
             <!--<button id="ajaxbtn">Surprise en Ajax !</button> -> cliqué <span id="nbajax">0</span> fois-->
         </footer>
     </div>

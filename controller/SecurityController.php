@@ -128,7 +128,7 @@
                         
                             Session::setUser($user);
                             
-                            $this->redirectTo("forum", "listCategories");
+                            $this->redirectTo('DEFAULT_CTRL');
                             die();
                         }
                     }
