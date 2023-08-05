@@ -70,4 +70,16 @@
                     ":id" => $id
             ]);
         }
+
+        public function deleteUserById($id)
+        {
+            $sql = "UPDATE ".$this->tableName." 
+                    SET pseudo = 'Deleted User', email = NULL, password = NULL
+                    WHERE id_".$this->tableName." = :id";
+
+            return DAO::update($sql, [
+                ":id" => $id,
+            ]);
+        }
+
     }

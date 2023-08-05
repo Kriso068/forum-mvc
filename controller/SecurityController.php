@@ -206,4 +206,21 @@
             }
         }
 
+        public function deleteUser($id)
+        {
+            $userManager = new UserManager();
+
+            $user = $userManager -> findOneById($id);
+
+            if($user){
+                
+                $userManager->deleteUserById($id);
+                
+                unset($_SESSION['user']);
+
+            }
+
+            $this->redirectTo(' DEFAULT_CTRL');
+        }
+
     }

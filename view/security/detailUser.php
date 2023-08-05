@@ -6,6 +6,9 @@ $topics = $result["data"]["topics"];
 ?>
 
 <h1>Detail of <?=$user->getPseudo()?></h1>
+
+<?php if (($user->getId() == (app\Session::getUser()->getId()))) :?>
+    <a class="btn btn-dANGER col-4" aria-current="page" href="index.php?ctrl=security&action=deleteUser&id=<?=$user->getId()?>">Delete User</a>
 <div class="row">
     <div class="col d-flex justify-content-between">
         <a class="btn btn-primary col-4" aria-current="page" href="index.php?ctrl=home&action=editUser&id=<?=$user->getId()?>">Edit User</a>
@@ -45,3 +48,4 @@ $topics = $result["data"]["topics"];
     <?php endif; ?> 
     
 </div>
+<?php endif; ?> 
